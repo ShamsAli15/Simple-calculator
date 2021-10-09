@@ -8,8 +8,6 @@ void main() {
 }
 
 class CalcApp extends StatefulWidget {
-  const CalcApp({Key? key}) : super(key: key);
-
   @override
   CalcAppState createState() => CalcAppState();
 }
@@ -57,33 +55,34 @@ class CalcAppState extends State<CalcApp> {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.white,
           title: Text(
             'Calculator',
             style: TextStyle(
-                color: Color(0xFFE57373),
-                fontSize: 30.0,
+                color: Color(0xFF311B92),
+                fontSize: 40.0,
                 fontWeight: FontWeight.bold),
           ),
-          elevation: null,
+          centerTitle: true,
+          elevation: 0.0,
         ),
         body: SafeArea(
           child: Container(
-            color: Colors.black,
+            color: Colors.white,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Expanded(
                   flex: 1,
                   child: Container(
-                    color: Colors.black,
+                    color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: Text(
                         _history,
                         style: GoogleFonts.rubik(
                           textStyle: TextStyle(fontSize: 24.0),
-                          color: Color(0xFFF5F5F5),
+                          color: Color(0xFF311B92),
                         ),
                       ),
                     ),
@@ -98,11 +97,11 @@ class CalcAppState extends State<CalcApp> {
                       top: Radius.circular(25),
                     ),
                     //0xFFCB3A28
-                    color: Color(0xFF212121),
+                    color: Color(0xFFEDE7F6),
                   ),
                 ),
                 Container(
-                  color: Color(0xFF212121),
+                  color: Color(0xFFEDE7F6),
                   child: Padding(
                     padding: const EdgeInsets.only(
                         left: 16.0, right: 16.0, bottom: 16.0),
@@ -116,7 +115,7 @@ class CalcAppState extends State<CalcApp> {
                             _expression,
                             style: GoogleFonts.rubik(
                               textStyle: TextStyle(fontSize: 48.0),
-                              color: Colors.white,
+                              color: Color(0xFF311B92),
                             ),
                           ),
                           alignment: Alignment(1, 1),
@@ -126,23 +125,23 @@ class CalcAppState extends State<CalcApp> {
                           children: [
                             Calculator(
                                 text: 'AC',
-                                fillColor: 0xFF757575,
+                                fillColor: 0xFFB39DDB,
                                 textSize: 20.0,
                                 callBack: numClick),
                             Calculator(
                               text: 'C',
-                              fillColor: 0xFF757575,
+                              fillColor: 0xFFB39DDB,
                               callBack: Clear,
                             ),
                             Calculator(
                                 text: '%',
-                                fillColor: 0xFFFFEBEE,
-                                textColor: 0xFFE57373,
+                                fillColor: 0xFFD1C4E9,
+                                textColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '/',
-                                fillColor: 0xFFFFEBEE,
-                                textColor: 0xFFE57373,
+                                fillColor: 0xFFD1C4E9,
+                                textColor: 0xFF311B92,
                                 textSize: 30.0,
                                 callBack: numClick),
                           ],
@@ -152,20 +151,20 @@ class CalcAppState extends State<CalcApp> {
                           children: [
                             Calculator(
                                 text: '7',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '8',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '9',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '*',
-                                fillColor: 0xFFFFEBEE,
-                                textColor: 0xFFE57373,
+                                fillColor: 0xFFD1C4E9,
+                                textColor: 0xFF311B92,
                                 textSize: 30.0,
                                 callBack: numClick),
                           ],
@@ -175,20 +174,20 @@ class CalcAppState extends State<CalcApp> {
                           children: [
                             Calculator(
                                 text: '4',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '5',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '6',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '-',
-                                fillColor: 0xFFFFEBEE,
-                                textColor: 0xFFE57373,
+                                fillColor: 0xFFD1C4E9,
+                                textColor: 0xFF311B92,
                                 textSize: 30.0,
                                 callBack: numClick),
                           ],
@@ -198,20 +197,20 @@ class CalcAppState extends State<CalcApp> {
                           children: [
                             Calculator(
                                 text: '1',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '2',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '3',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '+',
-                                fillColor: 0xFFFFEBEE,
-                                textColor: 0xFFE57373,
+                                fillColor: 0xFFD1C4E9,
+                                textColor: 0xFF311B92,
                                 textSize: 30.0,
                                 callBack: numClick),
                           ],
@@ -221,21 +220,21 @@ class CalcAppState extends State<CalcApp> {
                           children: [
                             Calculator(
                                 text: '.',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '0',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 callBack: numClick),
                             Calculator(
                                 text: '00',
-                                fillColor: 0xFF303030,
+                                fillColor: 0xFF311B92,
                                 textSize: 26.0,
                                 callBack: numClick),
                             Calculator(
                                 text: '=',
-                                fillColor: 0xFFFFEBEE,
-                                textColor: 0xFFE57373,
+                                fillColor: 0xFFD1C4E9,
+                                textColor: 0xFF311B92,
                                 textSize: 30.0,
                                 callBack: evaluate),
                           ],
